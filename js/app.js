@@ -50,6 +50,13 @@ const indicator = document.querySelector(".tabbar .indicator");
         projects.forEach(project => {
         const card = document.createElement("div");
         card.classList.add("project-card");
+
+        const techStackHTML = project.techStack.map(tech =>{        
+        
+          return `<a  class ="tech-button">
+              <span class="tech-button-text">${tech.label}</span>
+          </a>
+        `}).join("");
        
         const actionsHTML = project.actions.map(action =>{
         
@@ -84,6 +91,9 @@ const indicator = document.querySelector(".tabbar .indicator");
            <div class="text-content">
                 <h2>${project.name}</h2>
                 <p>${project.description}</p>
+                <div class="tech-stack">
+                    ${techStackHTML}
+                </div>
                 <div class="actions-buttons">
                     ${actionsHTML}
                 </div>

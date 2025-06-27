@@ -10,6 +10,7 @@
     --background-color-2: #fafafa;
     --background-color-3: #f5f5f5;
     --background-color-4: #eeeeee;
+    --tech-stack-chips-color:#2f2a41;
 
     /* Fuentes */
     --font-stack-body: "Karla", sans-serif;
@@ -73,6 +74,7 @@
         --background-color-2: idx-color("gray", "920");
         --background-color-3: idx-color("gray", "950");
         --background-color-4: idx-color("gray", "975");
+        --tech-stack-chips-color:#fce413;
         color-scheme: dark;
     }
 }
@@ -289,6 +291,13 @@ h2{
     display: flex;
     flex-direction: row;  
     gap: 12px;
+    padding: 32px 24px 0px 0px;  
+}
+.project-card .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;  
+    gap: 12px;
     padding: 20px 24px 0px 0px;  
 }
 .project-card .action-button{
@@ -297,6 +306,13 @@ h2{
 
 .project-card .action-button-text{
     font-size: 14px;
+}
+.project-card .tech-button{
+    height: 24px;
+}
+
+.project-card .tech-button-text{
+    font-size: 12px;
 }
 .material-symbols-outlined {
   font-size: 16px;
@@ -362,6 +378,21 @@ h2{
     text-decoration: none;
     border: 1px solid var(--accent-color);
    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    cursor:pointer;
+}
+
+.project-card .tech-stack a {
+    height: 24px;
+    display: flex;
+    padding: 8px 10px;
+    align-items: center;
+    color: var(--tech-stack-chips-color);
+    background-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid var(--tech-stack-chips-color);
+   border-radius: 16px;
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     cursor:pointer;
 }
