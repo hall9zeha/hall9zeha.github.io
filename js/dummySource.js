@@ -137,6 +137,11 @@ const projects=[
          { label: "GitHub", url: "https://github.com/hall9zeha/ConnectFour-Android" },
       { label: "demo", url: "https://github.com/hall9zeha/ConnectFour-Android/raw/main/demo/conecta4.apk" }
     ]),
+     new Project(ANDROID,"Tic tac toe",
+      `
+      Clásico reto técnico del juego tres en raya para Android escrita en Java, usando firebase firestore y firebase authentication.
+      `,"./images/tictactoe-mockup.jpg",[
+         { label: "GitHub", url: "https://github.com/hall9zeha/TicTacToe" }]),
     new Project(ANDROID,"Fire chat",
       `
       Aplicación de chat escrita en Java para Android usando
@@ -228,6 +233,17 @@ const projects=[
          { label: "GitHub", url: "https://github.com/hall9zeha/AttackOnTitanQuiz" },
           { label: "demo", url: "https://github.com/hall9zeha/AttackOnTitanQuiz/raw/main/apk/QuizApp1.0_Kotlin.apk" }
          
+      
+    ]),
+     new Project(ANDROID,"Android flows",
+      `
+      Aplicación que ejemplifica el uso de flujos en Android con Kotlin. 
+      La API de Coinbase se utiliza para llamar a un flujo constante
+       y obtener el precio de una criptomoneda (bitcoin en este caso) en tiempo real.
+      `,
+       "./images/flowsandroid.gif",[
+         { label: "GitHub", url: "https://github.com/hall9zeha/Android-Flows" }
+             
       
     ]),
      new Project(WEB,"Java Script Projects",
