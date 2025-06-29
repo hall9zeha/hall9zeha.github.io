@@ -1,6 +1,30 @@
 import { projects}  from './dummySource.js';
+let slideIndex = 1
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+  }
+  function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+  function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
 
 document.addEventListener("DOMContentLoaded", function() {
+  
 
 const indicator = document.querySelector(".tabbar .indicator");
 
@@ -14,7 +38,9 @@ const indicator = document.querySelector(".tabbar .indicator");
   const tabs = document.querySelectorAll(".tabbar li")
   const projectsGrid = document.querySelector(".projects-grid");
 
-    getProjects(projects)
+    getProjects(projects);
+    fetchCurrentYear();
+    showSlides(slideIndex)
     
     tabs.forEach(tab=>{
             tab.addEventListener("click",function(){
@@ -28,7 +54,6 @@ const indicator = document.querySelector(".tabbar .indicator");
                 const id=parseInt(tab.getAttribute("data-id"),0)
                 const filtered = filterProjectsById(id)
                 getProjects(filtered)
-                
 
             })
         }
@@ -42,7 +67,10 @@ const indicator = document.querySelector(".tabbar .indicator");
       return projects.filter(p => p.platform === id);
     }
     }
-
+    function fetchCurrentYear(){
+      const year = new Date().getFullYear();
+      document.getElementById('year').textContent = year
+    }
    
     function getProjects(projects){      
       
@@ -55,8 +83,8 @@ const indicator = document.querySelector(".tabbar .indicator");
         
           return `<a  class ="tech-button">
               <span class="tech-button-text">${tech.label}</span>
-          </a>
-        `}).join("");
+          </a>`
+        }).join("");
        
         const actionsHTML = project.actions.map(action =>{
         
@@ -81,10 +109,10 @@ const indicator = document.querySelector(".tabbar .indicator");
           return `<a href="${action.url}" class ="action-button" target="_blank">
               <span class="material-symbols-outlined">${icon}</span>
               <span class="action-button-text">${action.label}</span>
-          </a>
-        `}).join("");
+          </a>`
+        }).join("");
         
-         const isGif = project.imageUrl.toLowerCase().endsWith(".gif");
+         const isGif = project.screenshots[0].imageUrl.toLowerCase().endsWith(".gif");
         const imageClass = isGif ? "image-container-gif" : "image-container";
 
         card.innerHTML = `
@@ -100,19 +128,77 @@ const indicator = document.querySelector(".tabbar .indicator");
             </div>
             
             <div class="${imageClass}">
-            <img src="${project.imageUrl}" alt="${project.name}">
-            </div>
-        `;
+            ${setImagesOfProject(project)}           
+            </div>`
+        ;
 
-
+          
         projectsGrid.appendChild(card);
-
+        addEventListeners()
+        
+        
     });
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
     }
-   
+
+    function setImagesOfProject(project){
+      // Si tenemos solo una imagen
+      if(project.screenshots.length==1){
+          return  `<img src="${project.screenshots[0].imageUrl}" alt="${project.screenshots[0].name}">`
+      }
+      // Si tenemos varias imágenes para un proyecto lo convertimos en un slideshow
+      else if (project.screenshots.length >1){
+             
+        const images = project.screenshots.map(screen =>{
+          return `<div class="mySlides fade">
+             <img src="${screen.imageUrl}" alt="${screen.name}">
+          </div>`
+        }).join("");
+
+        const prevAndNext = `
+        <a class="prev" >&#10094;</a>
+        <a class="next" >&#10095;</a> `
+        
+        const dots =  project.screenshots.map((screen, index) =>{
+          return `<span class="dot"></span>`
+        }).join("");
+
+        const slideContainer = `<div class="slideshow-container">
+        ${images}
+        ${prevAndNext}
+        <div style="text-align:center">
+        ${dots}
+        </div>
+        </div>`;
+        return slideContainer
+        
+      }
+      
+      return ""
+      
+    }
+   function addEventListeners(){
+      const prevButton = document.querySelectorAll('.prev');
+    const nextButton = document.querySelectorAll('.next');
+    
+    prevButton.forEach(button => {
+        button.addEventListener('click', () => plusSlides(-1));
+    });
+
+    nextButton.forEach(button => {
+        button.addEventListener('click', () => plusSlides(1));
+    });
+    
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => currentSlide(index + 1));
+    });
+   }
+  
+ 
 });
+
 
