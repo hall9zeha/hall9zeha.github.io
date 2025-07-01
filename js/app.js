@@ -17,11 +17,8 @@ function plusSlides(n, projectIndex) {
    
     let slideIndex = getSlideIndexForProject(projectIndex);
     
-    slideIndex += n;
-    //console.log("longitud slide", slides.length-1)
-    
+    slideIndex += n;    
     console.log(" after plus slide index", slideIndex)
-      //console.log("slides indices array",slideIndices)
     showSlides(slideIndex, projectIndex);
   }
   function currentSlide(n, projectIndex) {
@@ -44,7 +41,7 @@ function plusSlides(n, projectIndex) {
     // Actualizar el índice de la diapositiva para este proyecto
     setSlideIndexForProject(projectIndex, slideIndex);
 
-    // Ocultar todas las diapositivas
+    // Ocultar todas las imágenes
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
@@ -54,7 +51,7 @@ function plusSlides(n, projectIndex) {
         dots[i].classList.remove("active");
     }
 
-    // Mostrar la diapositiva activa
+    // Mostrar la imagen activa
     slides[slideIndex].style.display = "block";
 
     // Activar el punto correspondiente
@@ -243,39 +240,35 @@ const indicator = document.querySelector(".tabbar .indicator");
   function addEventListeners(container) {
     const prevButton = container.querySelector('.prev');
     const nextButton = container.querySelector('.next');
-
-    // Asegúrate de que solo agregas el eventListener una vez
     if (prevButton) {
-        prevButton.removeEventListener('click', handlePrevClick); // Elimina listeners previos
+        prevButton.removeEventListener('click', handlePrevClick);
         prevButton.addEventListener('click', handlePrevClick);
     }
 
     if (nextButton) {
-        nextButton.removeEventListener('click', handleNextClick); // Elimina listeners previos
+        nextButton.removeEventListener('click', handleNextClick);
         nextButton.addEventListener('click', handleNextClick);
     }
 
     // Dots
     const dots = container.querySelectorAll('.dot');
     dots.forEach((dot, i) => {
-        dot.removeEventListener('click', handleDotClick); // Elimina listeners previos
+        dot.removeEventListener('click', handleDotClick);
         dot.addEventListener('click', (event) => handleDotClick(event, i));
     });
 }
 
-// Handler for prev button
 function handlePrevClick(event) {
     const projectIndex = event.target.getAttribute('data-project-index');
     plusSlides(-1, projectIndex);
 }
 
-// Handler for next button
+
 function handleNextClick(event) {
     const projectIndex = event.target.getAttribute('data-project-index');
     plusSlides(1, projectIndex);
 }
 
-// Handler for dots
 function handleDotClick(event, dotIndex) {
     const projectIndex = event.target.getAttribute('data-project-index');
     currentSlide(dotIndex, projectIndex);
