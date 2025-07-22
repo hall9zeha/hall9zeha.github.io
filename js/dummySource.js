@@ -29,7 +29,7 @@ const projects=[
         {label:"exoplayer"},{label:"services"},{label:"glide"},{label:"room"},
         {label:"flavors"},{label:"modularized"},{label:"disc-cover-view"},{label:"navigation"},
         {label:"splash screen API"},{label:"view pager 2"}],
-        [{imageUrl:"./images/musicapp-project-mockup.jpg",name:"music app"},{imageUrl:"./images/musicapp-project-mockup.jpg", name:"KMusic"}]
+        [{imageUrl:"./images/musicapp-project-mockup.jpg", name:"KMusic"}]
       ),
 
 
@@ -519,7 +519,7 @@ const projects=[
       {label:"python"},{label:"jupyter notebook"}
     ],
     [
-      {imageUrl:"./images/screen2.png", name:"python intermediate samples"}
+      {imageUrl:"./images/screen2.png", name:"python intermediate samples"},{imageUrl:"./images/screen1.png", name:"python intermediate samples"}
     ]),
 
 ]
