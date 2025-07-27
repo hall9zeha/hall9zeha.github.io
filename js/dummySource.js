@@ -23,7 +23,9 @@ const projects=[
        La aplicación tiene dos versiones o flavours: KMusic Bass que usa la librería BASS de un4seen y KMusic Exo 
        que usa La API MediaPlayer de Android.`,[
          { label: "Github", url: "https://github.com/hall9zeha/MusicPlayerApp" },
-        { label: "Demo", url: "https://github.com/hall9zeha/MusicPlayerApp/raw/main/docs/demo/Kmusic_bass_version.apk" }],
+        { label: "Bass demo", url: "https://github.com/hall9zeha/MusicPlayerApp/raw/main/docs/demo/Kmusic_bass_version.apk" },
+        { label: "Exoplayer demo", url: "https://github.com/hall9zeha/MusicPlayerApp/raw/main/docs/demo/Kmusic_exoplayer_version.apk" }
+      ],
       [{label:"kotlin"},{label:"kotlin view"},{label:"material you"},{label:"jaudiotagger"},
         {label:"MVVM"},{label:"view binding"},{label:"dagger hilt"},{label:"BASS"},{label:"equalizer"}, 
         {label:"exoplayer"},{label:"services"},{label:"glide"},{label:"room"},
@@ -511,8 +513,7 @@ const projects=[
        en python sobre Jupiter notebook, desde fundamentos
       de programación, hasta temas más avanzados como manejos de ficheros, bases de datos, etc.`,
       [
-         { label: "GitHub", url: "https://github.com/hall9zeha/Intermediate-Python-Samples" }
-         
+         { label: "GitHub", url: "https://github.com/hall9zeha/Intermediate-Python-Samples" }         
       
     ],
     [
