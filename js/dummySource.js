@@ -308,10 +308,7 @@ const projects=[
     ]),
 
     new Project(ANDROID,"Material Button loading",
-      `
-      Una librería escrita en Kotlin para Android view que implementa un botón con animaciones de carga, cuyo propósito es servir
-      como indicador en formularios de inicio de sesión o cualquier otro uso. Ya los sé, hay bastantes y mejores alternativas
-      pero el placer de usar algo hecho por uno mismo es el motivo de su creación.
+      `Una librería escrita en Kotlin para Android que proporciona un botón con animaciones de carga, diseñada como indicador visual en formularios de inicio de sesión u otros procesos relacionados con la carga de datos.
       `,[
          { label: "GitHub", url: "https://github.com/hall9zeha/MaterialButtonLoading" },
           {label:"deploy",url:"https://jitpack.io/#hall9zeha/MaterialButtonLoading"}
