@@ -198,6 +198,33 @@ const projects=[
     [
       {imageUrl:"./images/christmasapp-mockup.jpg", name:"christmas countdown"}
     ]),
+    new Project(OTHER, "Weather MCP server",`Servidor MCP creado con Spring Boot para exponer servicios meteorológicos y de calidad del aire utilizando la API de OpenWeatherMap, preparado para integración con modelos de lenguaje y agentes MCP (Model Context Protocol).`
+      ,[
+        {label:"Github", url:"https://github.com/hall9zeha/WeatherMCPServer"},
+       ],
+       [
+        {label:"Java"},{label:"Spring Boot"},{label:"MCP"},{label:"OpenWeatherMap"},{label:"API"},{label:"lombok"},{label:"gradle"},
+        {label:"spring AI MCP"},{label:"JSON"}
+       ],
+       [
+        {imageUrl:"./images/mcpserver-screen1.jpg", name:"mcp-server"},{imageUrl:"./images/mcpserver-screen2.jpg", name:"mcp-server"}
+       ]
+    ),
+    new Project(ANDROID,"Music Brainz API client",`
+      Un cliente ligero para Android que simplifica el uso de la MusicBrainz API.
+      Esta librería realiza todas las llamadas a la API de manera interna y solo expone métodos sencillos para que los desarrolladores puedan integrarla fácilmente en sus aplicaciones.
+      `,[
+        {label:"Github", url:"https://github.com/hall9zeha/Music-Brainz-Android-Client"},
+        {label:"Deploy", url:"https://jitpack.io/#hall9zeha/Music-Brainz-Android-Client"}
+      ],
+      [
+        {label:"Kotlin"},{label:"Music Brainz"},{label:"Music Brainz API"},{label:"API"},{label:"Android library"},{label:"jitpack"},{label:"Music Brainz client"}
+        
+      ],
+      [
+        {imageUrl:"./images/musicbrainz-screen1.jpg", name:"music-brainz-api"},{imageUrl:"./images/musicbrainz-screen2.jpg", name:"music-brainz-api"}
+      ]
+    ),
     new Project(ANDROID,"Simple notepad",
       `Una pequeña aplicación de notas para Android que usa una arquitectura modular escrita en kotlin view.
       Cuya finalidad fue la de aprender a usar módulos y onboarding.
