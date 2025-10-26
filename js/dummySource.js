@@ -23,7 +23,7 @@ const projects=[
        La aplicación tiene dos versiones o flavours: KMusic Bass que usa la librería BASS de un4seen y KMusic Exo 
        que usa La API MediaPlayer de Android.`,[
          { label: "Github", url: "https://github.com/hall9zeha/MusicPlayerApp" },
-        { label: "Bass demo", url: "https://github.com/hall9zeha/MusicPlayerApp/raw/main/docs/demo/Kmusic_bass_version.apk" },
+        { label: "Bass demo", url: "https://github.com/hall9zeha/MusicPlayerApp/releases/download/v1.0.0/Kmusic_bass_version.apk" },
         { label: "Exoplayer demo", url: "https://github.com/hall9zeha/MusicPlayerApp/raw/main/docs/demo/Kmusic_exoplayer_version.apk" }
       ],
       [{label:"kotlin"},{label:"kotlin view"},{label:"material you"},{label:"jaudiotagger"},
