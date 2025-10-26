@@ -24,7 +24,7 @@ const projects=[
        que usa La API MediaPlayer de Android.`,[
          { label: "Github", url: "https://github.com/hall9zeha/MusicPlayerApp" },
         { label: "Bass demo", url: "https://github.com/hall9zeha/MusicPlayerApp/releases/download/v1.0.0/Kmusic_bass_version.apk" },
-        { label: "Exoplayer demo", url: "https://github.com/hall9zeha/MusicPlayerApp/raw/main/docs/demo/Kmusic_exoplayer_version.apk" }
+        { label: "Exoplayer demo", url: "https://github.com/hall9zeha/MusicPlayerApp/releases/download/v1.0.0/Kmusic_exoplayer_version.apk" }
       ],
       [{label:"kotlin"},{label:"kotlin view"},{label:"material you"},{label:"jaudiotagger"},
         {label:"MVVM"},{label:"view binding"},{label:"dagger hilt"},{label:"BASS"},{label:"equalizer"}, 
