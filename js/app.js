@@ -182,13 +182,8 @@ const indicator = document.querySelector(".tabbar .indicator");
           console.log("slide containers count", project.screenshots.length)
            imageContainers.forEach((container, index) => {
                 addEventListeners(container);
-          });
-
-        
-        }
-  
-        
-        
+          });        
+        }   
         
     });
    
