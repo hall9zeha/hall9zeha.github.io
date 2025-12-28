@@ -189,7 +189,7 @@ const projects=[
       Para quien le gusta la navidad.
       `,[
          { label: "GitHub", url: "https://github.com/hall9zeha/ChristmasAppCompose" },
-      { label: "demo", url: "https://github.com/hall9zeha/ChristmasAppCompose/raw/main/demo/christmas-countdown.apk" }
+      { label: "demo", url: "https://github.com/hall9zeha/ChristmasAppCompose/releases/download/v1.0.0/christmas-countdown.apk" }
     ],
     [
       {label:"kotlin"},{label:"jetpack compose"},{label:"view binding"},{label:"mvvm"},{label:"room"},{label:"flows"},{label:"data store preferences"},
