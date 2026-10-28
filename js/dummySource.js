@@ -38,7 +38,7 @@ const projects=[
     new Project(ANDROID,"Music Player Compose (BASS)", 
       `Una aplicación  básica para reproducción música escrita en kotlin usando el Jetpack Compose y la librería BASS
       de un4seen para la decodificación de audio. El propósito de  esta app es servir de ejemplo para quien lo necesite.`,
-      [{ label: "GitHub", url: "https://github.com/hall9zeha/MusicPlayerCompose-BASS" }
+      [{ label: "GitHub", url: "https://github.com/hall9zeha/MusicPlayerCompose-BASS" },{label: "Demo", url:"https://github.com/hall9zeha/MusicPlayerCompose-BASS/releases/download/v1.1.0/kmusic_bass_mini.apk"}
     ],
     [
       {label:"Kotlin"},{label:"jetpack compose"},{label:"view binding"},{label:"BASS un4seen"},{label:"navigation compose"},
